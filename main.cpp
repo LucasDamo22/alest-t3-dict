@@ -44,6 +44,11 @@ int main(){
 
     WordTree* t = new WordTree();
     t->addWord("abacate", "fruta que vem da planta abacateiro");
+    t->addWord("abacateiro", "segunda linha");
+    t->addWord("abacateira", "terceira linha");
+    t->addWord("bola", "brinquedo infantil");
+    t->addWord("boliche","jogo adulto");
+
     t->printTree();
 
 }

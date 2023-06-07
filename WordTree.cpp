@@ -1,15 +1,16 @@
 #include "WordTree.h"
 #include <iostream>
 
-WordTree::WordTree(){
-    this->root = new CharNode('.',"");
+WordTree::WordTree() {
+    this->root = new CharNode('.', "");
 }
 
-void WordTree::addWord(string word, string significado){
-    CharNode *ptr = root;
-
+void WordTree::addWord(string word, string significado) {
+    CharNode* ptr = root;
+    
 
     ptr->addChild(word, significado);
+    
     // for(size_t i = 0; i < word.length();i++){
     //     char caractere = word[i];
     //     if (i == ((word.length())-1)){
@@ -20,9 +21,9 @@ void WordTree::addWord(string word, string significado){
     // }
 }
 
-void WordTree::printTree(){
-    cout<<"wordtree"<<endl;
-    root->printTreee("");   
+void WordTree::printTree() {
+    
+    root->printTreee("");
 }
 
 
