@@ -44,15 +44,22 @@ int main(){
 
     WordTree* t = new WordTree();
     t->addWord("abacate", "fruta que vem da planta abacateiro");
-    t->addWord("abacateiro", "segunda linha");
-    t->addWord("abacateira", "terceira linha");
+    t->addWord("abacateiro", "planta q da abacate");
+    t->addWord("abacateira", "mulher do abacateiro");
     
     t->addWord("bola", "brinquedo infantil");
     t->addWord("bolado","emoção");
     t->addWord("boliche","jogo adulto");
-    
+    t->addWord("escola","lugar de estudo");
+    t->addWord("dado","cubo com numeros");
+    t->addWord("casa","lugar de moradia");
+    t->addWord("esfolar","remover a pele");
+    t->addWord("casar","casar");
+    t->addWord("dandelio","planta, eu acho");
 
-    t->printTree();
+    t->findAll("bol");
+    //t->printTree();
     //t->printNodes();
+    
 
 }

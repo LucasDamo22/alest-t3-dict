@@ -28,6 +28,8 @@ public:
     // Percorre a árvore e retorna uma lista com as palavras iniciadas pelo prefixo dado.
     std::list<string> searchAll(string prefix);
     void printNodes();
+    std::string testekek(string prefix);
+    string findAll(string word);
 
 };
     

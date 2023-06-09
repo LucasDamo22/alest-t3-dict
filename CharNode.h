@@ -32,6 +32,8 @@ public:
     
     void printTreee(string word);
     void printNodes(int nivel);
+    string concatena(string word, string concatenada);
+    CharNode*  findPrefix(string word);
 };
 
 

@@ -21,11 +21,16 @@ void WordTree::addWord(string word, string significado) {
     // }
 }
 void WordTree::printNodes(){
-    root->printNodes(1);
+    root->printNodes(0);
 }
 void WordTree::printTree() {
     
     root->printTreee("");
 }
 
-
+string WordTree::findAll(string word){
+    CharNode* ptr = root->findPrefix(word);
+    cout<<"word tree"<<word<<endl;
+    //ptr->printTreee(word);
+    cout<<ptr->character<<endl;
+}
