@@ -30,7 +30,11 @@ void WordTree::printTree() {
 
 string WordTree::findAll(string word){
     CharNode* ptr = root->findPrefix(word);
-    cout<<"word tree"<<word<<endl;
+    
     //ptr->printTreee(word);
-    cout<<ptr->character<<endl;
+    //cout<<ptr->character<<endl;
+    word.pop_back();
+    ptr->printTreee(word);
+    string lele(1, ptr->character);
+    return lele;
 }

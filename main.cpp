@@ -50,6 +50,7 @@ int main(){
     t->addWord("bola", "brinquedo infantil");
     t->addWord("bolado","emoção");
     t->addWord("boliche","jogo adulto");
+    t->addWord("bela","princesa disney");
     t->addWord("escola","lugar de estudo");
     t->addWord("dado","cubo com numeros");
     t->addWord("casa","lugar de moradia");
@@ -57,7 +58,9 @@ int main(){
     t->addWord("casar","casar");
     t->addWord("dandelio","planta, eu acho");
 
-    t->findAll("bol");
+
+    string teste = t->findAll("b");
+    
     //t->printTree();
     //t->printNodes();
     

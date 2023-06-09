@@ -77,21 +77,18 @@ CharNode* CharNode::addChild(string word, string significado) {
 void CharNode::printTreee(string word) {
 
     list<CharNode*>::iterator k;
-    cout<<"tree 1"<<endl;
-    cout<<word<<endl;
-    cout<<this->character<<endl;
-    cout<<"----"<<endl;
+ 
     if (this->character != '.'){
         word = word + this->character;
     }
-    cout<<"tree 2"<<endl;
+
     // cout<<"charnodeprint"<<endl;
     // cout << word << endl;
     // cout<<significado<<endl;
     if (this->significado != "") {
         cout << word << " - significado:" << significado << endl;
     }
-    cout<<"tree 4"<<endl;
+  
     for (k = subtrees.begin();k != subtrees.end(); k++) {
         (*k)->printTreee(word);
     }
@@ -117,10 +114,10 @@ void CharNode::printNodes(int nivel) {
 
 CharNode* CharNode::findPrefix(string word){
     list<CharNode*>::iterator k;
-    cout<<"1"<<endl;
+    
+    CharNode* ptr;
     if(word.length()==0){
-        cout<<"Word = 0"<<endl;
-        cout<<this->character<<"   caractere"<<endl;
+       
         return this;
     }
     for(k=subtrees.begin();k!=subtrees.end();k++){
@@ -128,13 +125,14 @@ CharNode* CharNode::findPrefix(string word){
             break;
         }
     }
-    cout<<"2"<<endl;
+    
     word = word.substr(1);
-    cout<<"3"<<endl;
     
     
-        cout<<"word maior que 0   "<<word<<endl;
-        cout<<this->character<<"   caractere"<<endl;
-    (*k)->findPrefix(word);
+    
+        
+        ptr = (*k)->findPrefix(word);
+    
+    return ptr;
     }
     
