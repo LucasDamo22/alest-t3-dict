@@ -34,6 +34,7 @@ public:
     void printNodes(int nivel);
     string concatena(string word, string concatenada);
     CharNode*  findPrefix(string word);
+    void printTreeeSemSig(string word);
 };
 
 

@@ -59,7 +59,7 @@ int main(){
     t->addWord("dandelio","planta, eu acho");
 
 
-    string teste = t->findAll("b");
+    string teste = t->findAll("bola");
     
     //t->printTree();
     //t->printNodes();

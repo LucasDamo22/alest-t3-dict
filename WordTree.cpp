@@ -29,12 +29,11 @@ void WordTree::printTree() {
 }
 
 string WordTree::findAll(string word){
+    
     CharNode* ptr = root->findPrefix(word);
     
-    //ptr->printTreee(word);
-    //cout<<ptr->character<<endl;
     word.pop_back();
-    ptr->printTreee(word);
+    ptr->printTreeeSemSig(word);
     string lele(1, ptr->character);
     return lele;
 }
