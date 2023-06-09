@@ -38,19 +38,24 @@ CharNode* CharNode::addChild(string word, string significado) {
     if (word.length() == 0) {
         return this->father;
     }
-    for (k = subtrees.begin();k != subtrees.end();k++) {
+    for (k = this->subtrees.begin();k != this->subtrees.end();k++) {
+        
         if ((*k)->character == word[0]) {
-            contain == true;
+            
+            contain = true;
             break;
         }
     }
 
     if (contain == true) {
+       
         word = word.substr(1);
+        
         (*k)->addChild(word, significado);
 
     }
     if (contain == false) {
+       
         char letra = word[0];
         CharNode* n;
         if (word.length() == 1) {
@@ -86,7 +91,22 @@ void CharNode::printTreee(string word) {
     }
 
 }
+void CharNode::printNodes(int nivel) {
 
+    list<CharNode*>::iterator k;
+    cout<<nivel;
+    for(int i =0; i<=nivel;i++){
+        cout<<"-";
+    }
+    cout<<this->character <<" sig "<< this->significado<<endl;
+
+    nivel++;
+    for (k = subtrees.begin();k != subtrees.end(); k++) {
+       (*k)->printNodes(nivel);
+      // cout<<(*k)->character<<endl;
+    }
+
+}
 // CharNode* CharNode::addChild(char element, string significado){
 
 //     auto it = std::find(subtrees.begin(),subtrees.end(), element);

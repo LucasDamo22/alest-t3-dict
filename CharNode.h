@@ -31,6 +31,7 @@ public:
 
     
     void printTreee(string word);
+    void printNodes(int nivel);
 };
 
 

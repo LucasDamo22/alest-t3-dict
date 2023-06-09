@@ -6,10 +6,10 @@ WordTree::WordTree() {
 }
 
 void WordTree::addWord(string word, string significado) {
-    CharNode* ptr = root;
+    
     
 
-    ptr->addChild(word, significado);
+    root->addChild(word, significado);
     
     // for(size_t i = 0; i < word.length();i++){
     //     char caractere = word[i];
@@ -20,7 +20,9 @@ void WordTree::addWord(string word, string significado) {
     //     }
     // }
 }
-
+void WordTree::printNodes(){
+    root->printNodes(1);
+}
 void WordTree::printTree() {
     
     root->printTreee("");

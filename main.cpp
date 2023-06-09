@@ -46,9 +46,13 @@ int main(){
     t->addWord("abacate", "fruta que vem da planta abacateiro");
     t->addWord("abacateiro", "segunda linha");
     t->addWord("abacateira", "terceira linha");
+    
     t->addWord("bola", "brinquedo infantil");
+    t->addWord("bolado","emoção");
     t->addWord("boliche","jogo adulto");
+    
 
     t->printTree();
+    //t->printNodes();
 
 }
