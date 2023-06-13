@@ -2,6 +2,7 @@
 #include <list>
 #include <fstream>
 #include <sstream>
+#include "Menu.h"
 #include "Palavra.h"
 #include "WordTree.h"
 
@@ -59,10 +60,11 @@ int main(){
     t->addWord("dandelio","planta, eu acho");
 
 
-    string teste = t->findAll("bola");
+    //string teste = t->findAll("bola");
     
     //t->printTree();
     //t->printNodes();
+    menu(t);
     
 
 }
