@@ -30,7 +30,8 @@ void prefix(WordTree *t){
     t->findAll(prefixo);
     cout<< "entre qual palavra você gostaria de saber o significado" <<endl;
     cin.ignore();
-    getline(std::cin,prefixo)
+    getline(std::cin,prefixo);
+    "aaaaaaa"
 
     t->
 
