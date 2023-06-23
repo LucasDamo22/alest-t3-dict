@@ -44,3 +44,6 @@ bool WordTree::findAll(string word){
 void WordTree::findSingleWord(string word){
     root->findSingleWord(word,"");
 }
+void WordTree::ordena(){
+    root->ordenaAlfabetica();
+}

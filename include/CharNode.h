@@ -14,6 +14,7 @@ public:
     std::list<CharNode*> subtrees;
     char character;
     string significado;
+    
 
     // Construtor
     CharNode (char element, string significado);
@@ -31,12 +32,16 @@ public:
 
 
     void findSingleWord(string word, string conc);
-    
+    void ordenaAlfabetica();
     void printTreee(string word);
     void printNodes(int nivel);
     string concatena(string word, string concatenada);
     CharNode*  findPrefix(string word);
     void printTreeeSemSig(string word);
+
+    static bool compareCharacters(const CharNode* a, const CharNode* b) {
+        return a->character < b->character;
+    }
 };
 
 

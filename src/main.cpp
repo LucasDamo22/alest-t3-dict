@@ -38,7 +38,7 @@ void addPalavras(WordTree* t){
     }
 
     while(lista.size() > 0){
-        cout << lista.front().getPalavra() << ": " << lista.front().getSignificado() << endl;
+        //cout << lista.front().getPalavra() << ": " << lista.front().getSignificado() << endl;
         t->addWord(lista.front().getPalavra(),lista.front().getSignificado());
         lista.pop_front();
     }
@@ -48,6 +48,7 @@ int main(){
     
     WordTree* t = new WordTree();
     addPalavras(t);
+    t->ordena();
     // t->addWord("abacate", "fruta que vem da planta abacateiro");
     // t->addWord("abacateiro", "planta q da abacate");
     // t->addWord("abacateira", "mulher do abacateiro");

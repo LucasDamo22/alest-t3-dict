@@ -1,7 +1,7 @@
 #include "CharNode.h"
 #include <algorithm>
 #include <iostream>
-
+#include <functional>
 
 
 CharNode::CharNode(char element, string significado) {
@@ -177,6 +177,20 @@ void CharNode::findSingleWord(string word, string conc) {
    
     (*k)->findSingleWord(word,conc);
 
-    
+}
+void CharNode::ordenaAlfabetica(){
+    list<CharNode*>::iterator k;
+    // sort(subtrees.begin(),
+    // subtrees.end(),
+    // [](const CharNode *a, const CharNode *b ){
+    //     return a->character < b->character;
+    // } );
+
+    //sort(subtrees.begin(),subtrees.end());
+    subtrees.sort(CharNode::compareCharacters);
+
+    for (k = subtrees.begin();k != subtrees.end();k++) {
+        (*k)->ordenaAlfabetica(); 
+    }
 }
 

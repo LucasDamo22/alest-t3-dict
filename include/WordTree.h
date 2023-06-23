@@ -31,6 +31,7 @@ public:
     std::string testekek(string prefix);
     bool findAll(string word);
     void findSingleWord(string word);
+    void ordena();
 };
 
     

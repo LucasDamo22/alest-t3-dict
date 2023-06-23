@@ -21,18 +21,34 @@ std::string menuSelect()
     ss << "====================================================================" << endl;
     return ss.str();
 }
+std::string capitalizeFirstLetter(const std::string& str) {
+    std::string result = str;
+    
+    if (!result.empty()) {
+        result[0] = std::toupper(result[0]); // Converte a primeira letra para maiúscula
+        
+        for (size_t i = 1; i < result.length(); ++i) {
+            result[i] = std::tolower(result[i]); // Converte o restante para minúsculo
+        }
+    }
+    
+    return result;
+}
 void prefix(WordTree *t){
     string prefixo;
     bool temPrefix;
     cout<<"digite o prefixo"<<endl;
     cin.ignore();
     getline(std::cin,prefixo);
-    cout<< endl<<endl;
+    prefixo = capitalizeFirstLetter(prefixo);
+    cout<<endl;
     temPrefix  = t->findAll(prefixo);
     if(temPrefix== true ){
         cout<< "entre as palavras acima, qual palavra você gostaria de saber o significado:" <<endl;
         //cin.ignore();
         getline(std::cin,prefixo);
+        prefixo = capitalizeFirstLetter(prefixo);
+        cout<<endl;
         t->findSingleWord(prefixo);
     }
 
