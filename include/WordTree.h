@@ -29,8 +29,9 @@ public:
     std::list<string> searchAll(string prefix);
     void printNodes();
     std::string testekek(string prefix);
-    string findAll(string word);
-
+    bool findAll(string word);
+    void findSingleWord(string word);
 };
+
     
 #endif

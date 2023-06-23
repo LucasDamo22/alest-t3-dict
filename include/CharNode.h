@@ -29,6 +29,8 @@ public:
     //Encontra e retorna o nodo que tem determinado caracter
     CharNode* findChildChar(char element);
 
+
+    void findSingleWord(string word, string conc);
     
     void printTreee(string word);
     void printNodes(int nivel);

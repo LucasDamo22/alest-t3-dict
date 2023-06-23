@@ -69,10 +69,7 @@ CharNode* CharNode::addChild(string word, string significado) {
 
         n->addChild(word, significado);
     }
-
-
-
-
+    return nullptr;
 }
 void CharNode::printTreee(string word) {
 
@@ -114,7 +111,10 @@ void CharNode::printNodes(int nivel) {
         cout << "-";
     }
 
-    cout << this->character << " sig " << this->significado << endl;
+    cout << this->character;
+    if(this->significado!="")
+        cout<<" significado: " << this->significado << endl;
+    cout<<endl;
 
     nivel++;
 
@@ -132,16 +132,51 @@ CharNode* CharNode::findPrefix(string word) {
     if (word.length() == 0) {
         return this;
     }
-
+    bool found = false;
     for (k = subtrees.begin();k != subtrees.end();k++) {
         if ((*k)->character == word[0]) {
+            found = true;
             break;
         }
     }
-
+    if(found == false){
+        cout<<"prefixo nao existe no dicionario"<<endl;
+        return nullptr;
+    }
     word = word.substr(1);
     ptr = (*k)->findPrefix(word);
 
     return ptr;
+}
+
+void CharNode::findSingleWord(string word, string conc) {
+    list<CharNode*>::iterator k;
+  
+    
+    if(word.length()==0 && this->significado!=""){
+        cout<<conc<<", significado:  "<< this->significado<<endl;
+        return;
+    }
+
+    bool found = false;
+    for (k = subtrees.begin();k != subtrees.end();k++) {
+        if ((*k)->character == word[0]) {
+            found = true;
+            break;
+        }
+    }
+   
+    if(found==false){
+        cout<<"Palavra não encontrada"<<endl;
+        return;
+    }
+   
+    conc += word[0];
+   
+    word = word.substr(1);
+   
+    (*k)->findSingleWord(word,conc);
+
+    
 }
 

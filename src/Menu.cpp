@@ -23,17 +23,20 @@ std::string menuSelect()
 }
 void prefix(WordTree *t){
     string prefixo;
+    bool temPrefix;
     cout<<"digite o prefixo"<<endl;
     cin.ignore();
     getline(std::cin,prefixo);
-    cout<< "as palavras que contem este prefixo são as seguintes: "<<endl;
-    t->findAll(prefixo);
-    cout<< "entre qual palavra você gostaria de saber o significado" <<endl;
-    cin.ignore();
-    getline(std::cin,prefixo);
-    "aaaaaaa"
+    cout<< endl<<endl;
+    temPrefix  = t->findAll(prefixo);
+    if(temPrefix== true ){
+        cout<< "entre as palavras acima, qual palavra você gostaria de saber o significado:" <<endl;
+        //cin.ignore();
+        getline(std::cin,prefixo);
+        t->findSingleWord(prefixo);
+    }
 
-    t->
+    
 
 }
 
